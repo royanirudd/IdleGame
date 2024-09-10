@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://j7sc82u1udpp"]
+
+[ext_resource type="Script" path="res://component/label_quest/label_quest.gd" id="1_xnc7h"]
+
+[node name="LabelQuest" type="Label"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+script = ExtResource("1_xnc7h")

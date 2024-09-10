@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwgsf1iqimct2"]
+
+[ext_resource type="Script" path="res://component/button_generator_wood/generator_toggle_button.gd" id="1_d23j8"]
+
+[node name="GeneratorToggleButton" type="Button"]
+custom_minimum_size = Vector2(320, 80)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ON/OFF"
+script = ExtResource("1_d23j8")

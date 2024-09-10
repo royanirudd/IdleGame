@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://ba3g1hf45i7jj"]
+
+[ext_resource type="Script" path="res://scenes/user_interface/user_interface.gd" id="1_ke2g1"]
+[ext_resource type="Script" path="res://scenes/user_interface/navigation_button.gd" id="2_3vr0l"]
+[ext_resource type="PackedScene" uid="uid://cjc1tby5dapb4" path="res://component/label_gold/label_gold.tscn" id="3_r1i5v"]
+[ext_resource type="PackedScene" uid="uid://bhctnpqjywabc" path="res://component/label_wood/label_wood.tscn" id="4_eko4d"]
+[ext_resource type="PackedScene" uid="uid://denpheuqm6ob8" path="res://scenes/areas/area_woodcutting/wood_cutting_ui.tscn" id="5_o64l4"]
+[ext_resource type="PackedScene" uid="uid://b4x7ivpf80osj" path="res://scenes/areas/market/market.tscn" id="6_4mp1c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2k3iy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="UserInterface" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ke2g1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+
+[node name="Navigator" type="ScrollContainer" parent="HBoxContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LeftPanel/Navigator"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanel/Navigator/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/LeftPanel/Navigator/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "View 1"
+script = ExtResource("2_3vr0l")
+navigation_index = 0
+
+[node name="Button2" type="Button" parent="HBoxContainer/LeftPanel/Navigator/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "View 2"
+script = ExtResource("2_3vr0l")
+navigation_index = 1
+
+[node name="Button3" type="Button" parent="HBoxContainer/LeftPanel/Navigator/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "View 3 TBA"
+
+[node name="Resources" type="Control" parent="HBoxContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanel/Resources"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelGold" parent="HBoxContainer/LeftPanel/Resources/VBoxContainer" instance=ExtResource("3_r1i5v")]
+layout_mode = 2
+
+[node name="LabelWood" parent="HBoxContainer/LeftPanel/Resources/VBoxContainer" instance=ExtResource("4_eko4d")]
+layout_mode = 2
+
+[node name="MainView" type="TabContainer" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_2k3iy")
+tabs_visible = false
+
+[node name="WoodCuttingUI" parent="HBoxContainer/MainView" instance=ExtResource("5_o64l4")]
+layout_mode = 2
+
+[node name="Market" parent="HBoxContainer/MainView" instance=ExtResource("6_4mp1c")]
+visible = false
+layout_mode = 2

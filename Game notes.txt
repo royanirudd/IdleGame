@@ -1,0 +1,31 @@
+Generator: Every 3 seconds generate 1 wood and stays on for 1 hour stops (FIXED NUMBER of 1 hour and 1 wood) 
+Exp adds 1 per wood cycle
+
+Label for woodchopping resets every session(1 hours max) give a popup when they log back in how much they cut while away
+	Each wood they cut goes into the inventory 
+	Max item ammount (soft cap for now TBD)
+
+Questing is working as intended
+	reward goes into inventory
+	(make some item (stored in player inventory) that is referenced by woodmanager to apply some discount)	 
+
+Combat: TBD IN SCOPE
+ 
+Social:
+TBD about multiplayer interfaces
+
+GAME LOOP OF MVP
+Skill -> Resource -> gold -> quest -> reward -> efficiency of skill(pickaxe/ axe...)Reduces timer of 1 resource(percentage) -> Skill etc...
+
+LORE/STORY:
+OUT OF SCOPE
+
+UI/UX:
+Basic mock-up
+Mock up for UI ie, sprites for buttons and layout for market and player inventory ...
+
+COMPETITOR RESEARCH:
+IDLE-MMO
+
+Adventure quest 
+

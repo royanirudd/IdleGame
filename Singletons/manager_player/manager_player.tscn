@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0ke3oav3xeub"]
+
+[ext_resource type="Script" path="res://Singletons/manager_player/manager_player.gd" id="1_1y0ro"]
+
+[node name="ManagerPlayer" type="Node"]
+script = ExtResource("1_1y0ro")

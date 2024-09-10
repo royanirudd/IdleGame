@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://6w7e3pos54gs"]
+
+[ext_resource type="Script" path="res://Singletons/wood_generator/wood_generator.gd" id="1_1n8et"]
+
+[node name="WoodGenerator" type="Node"]
+script = ExtResource("1_1n8et")
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://o7ppcjh78gr8"]
+
+[ext_resource type="Script" path="res://Singletons/game/game.gd" id="1_25wkl"]
+[ext_resource type="PackedScene" uid="uid://doajewsffosws" path="res://Singletons/manager_wood/manager_wood.tscn" id="1_jarvl"]
+[ext_resource type="PackedScene" uid="uid://b3k7anfxu772i" path="res://Singletons/manager_quest/manager_quest.tscn" id="1_lny7m"]
+[ext_resource type="PackedScene" uid="uid://c45gtbythh0xj" path="res://Singletons/manager_gold/manager_gold.tscn" id="2_o5nni"]
+[ext_resource type="PackedScene" uid="uid://6w7e3pos54gs" path="res://Singletons/wood_generator/wood_generator.tscn" id="4_yimly"]
+[ext_resource type="PackedScene" uid="uid://b0ke3oav3xeub" path="res://Singletons/manager_player/manager_player.tscn" id="6_kvnys"]
+[ext_resource type="PackedScene" uid="uid://ba3g1hf45i7jj" path="res://scenes/user_interface/user_interface.tscn" id="12_2adc2"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_25wkl")
+
+[node name="SaveTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 5.0
+autostart = true
+
+[node name="Singletons" type="Node" parent="."]
+
+[node name="ManagerQuest" parent="Singletons" instance=ExtResource("1_lny7m")]
+
+[node name="ManagerGold" parent="Singletons" instance=ExtResource("2_o5nni")]
+
+[node name="ManagerWood" parent="Singletons" instance=ExtResource("1_jarvl")]
+
+[node name="WoodGenerator" parent="Singletons" instance=ExtResource("4_yimly")]
+WOOD_TICK_MAX = 6
+WOOD_TICK_MIN = 70
+
+[node name="ManagerPlayer" parent="Singletons" instance=ExtResource("6_kvnys")]
+
+[node name="UserInterface" parent="." instance=ExtResource("12_2adc2")]

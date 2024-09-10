@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c45gtbythh0xj"]
+
+[ext_resource type="Script" path="res://Singletons/manager_gold/manager_gold.gd" id="1_esayx"]
+
+[node name="ManagerGold" type="Node"]
+script = ExtResource("1_esayx")

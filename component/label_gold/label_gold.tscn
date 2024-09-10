@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjc1tby5dapb4"]
+
+[ext_resource type="Script" path="res://component/label_gold/label_gold.gd" id="1_4wghc"]
+
+[node name="LabelGold" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_4wghc")
